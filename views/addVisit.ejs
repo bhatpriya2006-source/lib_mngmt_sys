@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Visit</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Add Visit</h1>
+        <form action="/visits/add" method="POST">
+            <input type="text" name="usn" placeholder="Enter USN" required>
+            <input type="datetime-local" name="entry_time" required>
+            <input type="datetime-local" name="exit_time" required>
+            <button>Add</button>
+        </form>
+    </div>
+</body>
+</html>

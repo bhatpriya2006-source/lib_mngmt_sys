@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Borrowed Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <div class="form-box">
+
+        <h1>Edit Borrowed Book</h1>
+
+        <form action="/borrowbook/edit/<%= book.ID %>" method="POST">
+
+            <input
+                type="text"
+                value="<%= book.ID %>"
+                disabled
+            >
+
+            <input
+                type="text"
+                name="usn"
+                value="<%= book.USN %>"
+                required
+            >
+
+            <input
+                type="number"
+                name="book_id"
+                value="<%= book.BOOK_ID %>"
+                required
+            >
+
+            <input
+                type="date"
+                name="book_date"
+                value="<%= book.BOOK_DATE %>"
+                required
+            >
+
+            <input
+                type="date"
+                name="return_date"
+                value="<%= book.RETURN_DATE %>"
+                required
+            >
+
+            <select name="status">
+                <option value="Borrowed"
+                    <%= book.STATUS === 'Borrowed' ? 'selected' : '' %>>
+                    Borrowed
+                </option>
+
+                <option value="Returned"
+                    <%= book.STATUS === 'Returned' ? 'selected' : '' %>>
+                    Returned
+                </option>
+            </select>
+
+            <button type="submit">Update</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

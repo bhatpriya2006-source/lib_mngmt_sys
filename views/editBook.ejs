@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= book.title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+     <div class="form-box">
+        <h1>Edit Book<%= book.title %></h1>
+        <form action="/books/edit/<%= book.ID %>" method="POST">
+             <input type="text" name="id" value="<%= book.ID %>" disabled>
+            <input type="text" name="title" value="<%= book.TITLE %>">
+            <input type="text" name="author" value="<%= book.AUTHOR %>">
+            <input type="text" name="quantity" value="<%= book.QUANTITY %>">
+            <button>Add</button>
+
+        </form>
+    </div>
+
+    
+</body>
+</html>

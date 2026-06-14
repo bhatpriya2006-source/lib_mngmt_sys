@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Edit Student</h1>
+        <form action="/students/edit/<%= student.USN %>" method="POST">
+            <input type="text" value="<%= student.USN %>" disabled>
+            <input type="text" name="name" value="<%= student.NAME %>">
+            <input type="text" name="branch" value="<%= student.BRANCH %>">
+            <button>Update</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Students Management</h1>
+        <a href="/students/addStudent">add new student</a>
+
+        <table>
+            <tr>
+                <th>USN</th>
+                <th>NAME</th>
+                <th>BRANCH</th>
+                <th>ACTIONS</th>
+            </tr>
+            <% students.forEach(student => { %>
+                <tr>
+                    <td><%= student.USN %></td>
+                    <td><%= student.NAME %></td>
+                    <td><%= student.BRANCH %></td>
+                    <td>
+                        <a href="/students/edit/<%= student.USN %>">edit</a>
+                        <a href="/students/delete/<%= student.USN %>">delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+</html>

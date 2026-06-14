@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Borrow Book</h1>
+
+        <form action="/borrowbook/borrownew" method="POST">
+
+            <input
+                type="text"
+                name="usn"
+                placeholder="Enter USN"
+                required
+            >
+
+            <input
+                type="text"
+                name="book_id"
+                placeholder="Enter Book ID"
+                required
+            >
+
+            <input
+                type="date"
+                name="book_date"
+                required
+            >
+
+            <input
+                type="date"
+                name="return_date"
+                required
+            >
+
+
+            <button type="submit">Borrow Book</button>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Books Management</h1>
+        <a href="/books/add">add new book</a>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>AUTHOR</th>
+                <th>QUANTITY</th>
+                <th>ACTIONS</th>
+            </tr>
+            <% books.forEach(book => { %>
+                <tr>
+                    <td><%= book.ID %></td>
+                    <td><%= book.TITLE %></td>
+                    <td><%= book.AUTHOR %></td>
+                    <td><%= book.QUANTITY %></td>
+                    <td>
+                        <a href="/books/edit/<%= book.ID %>">edit</a>
+                        <a href="/books/delete/<%= book.ID %>">delete</a>
+                    </td>
+                </tr>
+
+            <% }) %>
+        </table>
+    </div>
+    
+</body>
+</html>

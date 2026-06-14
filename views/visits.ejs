@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Visits</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="main-page">
+        <h1>Library Visits</h1>
+        <a href="/visits/add">add new visit</a>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>USN</th>
+                <th>ENTRY TIME</th>
+                <th>EXIT TIME</th>
+                <th>DURATION</th>
+                <th>ACTIONS</th>
+            </tr>
+            <% visits.forEach(visit => { %>
+                <tr>
+                    <td><%= visit.ID %></td>
+                    <td><%= visit.USN %></td>
+                    <td><%= visit.ENTRY_TIME %></td>
+                    <td><%= visit.EXIT_TIME %></td>
+                    <td><%= visit.DURATION %></td>
+                    <td>
+                        <a href="/visits/delete/<%= visit.ID %>">delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+</html>
