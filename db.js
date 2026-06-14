@@ -190,4 +190,4 @@ VALUES
 
     });
 
-    module.exports = db;
+   // module.exports = db;
